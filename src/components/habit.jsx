@@ -12,9 +12,10 @@ class Habit extends Component {
     handleDecrement = ()=>{
         const count = this.state.count - 1;
         this.setState({count:count < 0 ? 0 : count}); // 반드시 setState를 호출해야 한다.
-    }
+    };
 
     render() {
+        console.log(this.props);
         return (
         <li className="habit">
             <span className="habit-name">Reading</span>
