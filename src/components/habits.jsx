@@ -14,7 +14,6 @@ class Habits extends Component {
         const index = habits.indexOf(habit);
         habits[index].count++;
         this.setState({habits});
-        console.log(this.state.habits);
     };
      handleDecrement = (habit)=>{
         const habits = [...this.state.habits];
@@ -24,13 +23,8 @@ class Habits extends Component {
         this.setState({habits});
    };
      handleDelete = (habit) =>{
-        const habits = [...this.state.habits];
-        const index = habits.indexOf(habit);
-        const hab=habits.filter(value=>
-            value.name !== habits[index].name
-        );
-        console.log(hab);
-        this.setState({habits:hab});
+        const habits = this.state.habits.filter(item=> item.id !== habit.id);
+        this.setState({habits});
      };
     render() {
         return  (
