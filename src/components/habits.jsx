@@ -15,6 +15,9 @@ class Habits extends Component {
   handleAdd = (name) => {
     this.props.onAdd(name);
   };
+  handleReset = (habit) => {
+    this.props.onReset(habit);
+  };
   render() {
     console.log("habits");
     return (
@@ -28,6 +31,7 @@ class Habits extends Component {
               onIncrement={this.handleIncrement}
               onDecrement={this.handleDecrement}
               onDelete={this.handleDelete} //{this.handleDelete}이것을 사용해서 해주어도 된다. 이때는 handleDelete는 필요없다.
+              onReset={this.handleReset}
             />
           ))}
         </ul>
