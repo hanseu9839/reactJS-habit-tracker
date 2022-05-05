@@ -2,6 +2,12 @@ import React, { PureComponent } from "react";
 
 class Habit extends PureComponent {
   // State를 가지고 있을 필요성 x 왜냐면 props로 가져와주기 때문에
+  componentDidMount() {
+    console.log(`habit: ${this.props.habit.name} mounted`);
+  }
+  componentWillUnmount() {
+    console.log(`habit: ${this.props.habit.name} will unmount`);
+  }
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   };
