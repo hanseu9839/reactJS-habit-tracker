@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
-class Habit extends Component {
+class Habit extends PureComponent {
   // State를 가지고 있을 필요성 x 왜냐면 props로 가져와주기 때문에
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);

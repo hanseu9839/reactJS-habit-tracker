@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Habit from "./habit";
-import HabitAddForm from "./habitAddForm";
+import HabitAddForm from "./habitAddFrom";
 
 class Habits extends Component {
   handleIncrement = (habit) => {
